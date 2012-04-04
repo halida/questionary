@@ -3,7 +3,6 @@ class Ability
 
   def initialize(user)
     can :read, :all    
-    can :manage, :all
     return unless user
 
     can :manage, Post, user_id: user.id
